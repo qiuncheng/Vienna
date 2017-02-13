@@ -37,6 +37,8 @@ playground.xcworkspace
 # Packages/
 .build/
 
+Frameworks/*.framework
+
 # CocoaPods
 #
 # We recommend against adding the Pods directory to your .gitignore. However
@@ -63,3 +65,4 @@ fastlane/report.xml
 fastlane/Preview.html
 fastlane/screenshots
 fastlane/test_output
+
