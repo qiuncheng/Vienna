@@ -28,6 +28,9 @@
 		F222B0961E4D97110091B4BE /* PKHUD.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F222B0931E4D96F10091B4BE /* PKHUD.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F22EC46F1E535DBF00E661DD /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F22EC46E1E535DBF00E661DD /* Login.storyboard */; };
 		F22EC4711E535EAB00E661DD /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22EC4701E535EAB00E661DD /* LoginViewController.swift */; };
+		F22EC4781E536C2800E661DD /* AvatarImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22EC4741E536C2800E661DD /* AvatarImageView.swift */; };
+		F22EC4791E536C2800E661DD /* AvatarImageViewConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22EC4751E536C2800E661DD /* AvatarImageViewConfiguration.swift */; };
+		F22EC47A1E536C2800E661DD /* ColorCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22EC4761E536C2800E661DD /* ColorCache.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -68,6 +71,10 @@
 		F222B0931E4D96F10091B4BE /* PKHUD.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = PKHUD.framework; sourceTree = "<group>"; };
 		F22EC46E1E535DBF00E661DD /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		F22EC4701E535EAB00E661DD /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		F22EC4731E536C2800E661DD /* AvatarImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AvatarImageView.h; sourceTree = "<group>"; };
+		F22EC4741E536C2800E661DD /* AvatarImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AvatarImageView.swift; sourceTree = "<group>"; };
+		F22EC4751E536C2800E661DD /* AvatarImageViewConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AvatarImageViewConfiguration.swift; sourceTree = "<group>"; };
+		F22EC4761E536C2800E661DD /* ColorCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorCache.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +120,7 @@
 		F222B0621E4D781D0091B4BE /* Boring */ = {
 			isa = PBXGroup;
 			children = (
+				F22EC4721E536C2800E661DD /* AvatarImageView */,
 				F222B0631E4D781D0091B4BE /* AppDelegate.swift */,
 				F222B0651E4D781D0091B4BE /* ViewController.swift */,
 				F222B0671E4D781D0091B4BE /* Main.storyboard */,
@@ -151,6 +159,17 @@
 				F222B0931E4D96F10091B4BE /* PKHUD.framework */,
 			);
 			path = Carthage;
+			sourceTree = "<group>";
+		};
+		F22EC4721E536C2800E661DD /* AvatarImageView */ = {
+			isa = PBXGroup;
+			children = (
+				F22EC4731E536C2800E661DD /* AvatarImageView.h */,
+				F22EC4741E536C2800E661DD /* AvatarImageView.swift */,
+				F22EC4751E536C2800E661DD /* AvatarImageViewConfiguration.swift */,
+				F22EC4761E536C2800E661DD /* ColorCache.swift */,
+			);
+			path = AvatarImageView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -229,8 +248,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				F22EC4711E535EAB00E661DD /* LoginViewController.swift in Sources */,
+				F22EC4781E536C2800E661DD /* AvatarImageView.swift in Sources */,
 				F222B0661E4D781D0091B4BE /* ViewController.swift in Sources */,
 				F222B0641E4D781D0091B4BE /* AppDelegate.swift in Sources */,
+				F22EC47A1E536C2800E661DD /* ColorCache.swift in Sources */,
+				F22EC4791E536C2800E661DD /* AvatarImageViewConfiguration.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
