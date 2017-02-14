@@ -22,32 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         options?.enableConsoleLog = false
         
         EMClient.shared().initializeSDK(with: options)
-        PKHUD.sharedHUD.contentView = PKHUDProgressView()
-        PKHUD.sharedHUD.show(onView: self.window)
-        let registerError = EMClient.shared().register(withUsername: "12345", password: "123456abc")
-        
-        /// 登录操作
-        func login() {
-            let loginError = EMClient.shared().login(withUsername: "12345", password: "123456abc")
-            PKHUD.sharedHUD.hide()
-            if loginError != nil {
-                print("登录失败\(loginError?.errorDescription)")
-            }
-            else {
-                print("登录成功")
-            }
-        }
-        
-        if registerError != nil {
-            print("注册失败: \(registerError)")
-            if registerError!.code == EMErrorUserAlreadyExist {
-                login()
-            }
-            
-        } else {
-            print("注册成功")
-            login()
-        }
+      
         return true
     }
 
