@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--聊天室-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Boring" customModuleProvider="target" sceneMemberID="viewController">
@@ -21,17 +21,27 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Fdu-WV-KFf"/>
+                    <navigationItem key="navigationItem" title="聊天室" id="r7b-UV-dUI">
+                        <barButtonItem key="rightBarButtonItem" title="登出" id="pcH-kw-pfe">
+                            <connections>
+                                <action selector="logoutButtonClicked:" destination="BYZ-38-t0r" id="C7e-7e-ihS"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="o20-VM-fgH">
+                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
             </objects>
             <point key="canvasLocation" x="1809" y="693"/>
         </scene>
-        <!--Item-->
+        <!--Navigation Controller-->
         <scene sceneID="tSi-es-KOW">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ggO-rp-tLd" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="bmx-Mv-y49"/>
+                    <tabBarItem key="tabBarItem" systemItem="contacts" id="bmx-Mv-y49"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="gng-ap-frN">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -52,6 +62,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="bc5-VO-Zaa" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="1w4-hC-lDB">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
@@ -64,7 +75,7 @@
             </objects>
             <point key="canvasLocation" x="366" y="1033"/>
         </scene>
-        <!--View Controller-->
+        <!--设置-->
         <scene sceneID="nkN-fr-jIu">
             <objects>
                 <viewController id="w9X-4m-XVm" sceneMemberID="viewController">
@@ -77,17 +88,17 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
-                    <navigationItem key="navigationItem" id="uwF-6M-bIk"/>
+                    <navigationItem key="navigationItem" title="设置" id="uwF-6M-bIk"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cUN-b1-uSl" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1809" y="1363"/>
         </scene>
-        <!--Item-->
+        <!--Navigation Controller-->
         <scene sceneID="lrA-gg-ptl">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="1Ce-yG-en2" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="bUd-mR-2X9"/>
+                    <tabBarItem key="tabBarItem" systemItem="recents" id="bUd-mR-2X9"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="YUN-hD-peX">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>

@@ -31,6 +31,8 @@
 		F22EC4781E536C2800E661DD /* AvatarImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22EC4741E536C2800E661DD /* AvatarImageView.swift */; };
 		F22EC4791E536C2800E661DD /* AvatarImageViewConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22EC4751E536C2800E661DD /* AvatarImageViewConfiguration.swift */; };
 		F22EC47A1E536C2800E661DD /* ColorCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22EC4761E536C2800E661DD /* ColorCache.swift */; };
+		F2D3A0171E54A1B2003DF445 /* UserDefaultable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D3A0161E54A1B2003DF445 /* UserDefaultable.swift */; };
+		F2D3A0191E54ADCC003DF445 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D3A0181E54ADCC003DF445 /* Common.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -75,6 +77,8 @@
 		F22EC4741E536C2800E661DD /* AvatarImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AvatarImageView.swift; sourceTree = "<group>"; };
 		F22EC4751E536C2800E661DD /* AvatarImageViewConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AvatarImageViewConfiguration.swift; sourceTree = "<group>"; };
 		F22EC4761E536C2800E661DD /* ColorCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorCache.swift; sourceTree = "<group>"; };
+		F2D3A0161E54A1B2003DF445 /* UserDefaultable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultable.swift; sourceTree = "<group>"; };
+		F2D3A0181E54ADCC003DF445 /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +130,8 @@
 				F222B0671E4D781D0091B4BE /* Main.storyboard */,
 				F22EC46E1E535DBF00E661DD /* Login.storyboard */,
 				F22EC4701E535EAB00E661DD /* LoginViewController.swift */,
+				F2D3A0161E54A1B2003DF445 /* UserDefaultable.swift */,
+				F2D3A0181E54ADCC003DF445 /* Common.swift */,
 				F222B06A1E4D781D0091B4BE /* Assets.xcassets */,
 				F222B06C1E4D781D0091B4BE /* LaunchScreen.storyboard */,
 				F222B06F1E4D781D0091B4BE /* Info.plist */,
@@ -247,12 +253,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F2D3A0191E54ADCC003DF445 /* Common.swift in Sources */,
 				F22EC4711E535EAB00E661DD /* LoginViewController.swift in Sources */,
 				F22EC4781E536C2800E661DD /* AvatarImageView.swift in Sources */,
 				F222B0661E4D781D0091B4BE /* ViewController.swift in Sources */,
 				F222B0641E4D781D0091B4BE /* AppDelegate.swift in Sources */,
 				F22EC47A1E536C2800E661DD /* ColorCache.swift in Sources */,
 				F22EC4791E536C2800E661DD /* AvatarImageViewConfiguration.swift in Sources */,
+				F2D3A0171E54A1B2003DF445 /* UserDefaultable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

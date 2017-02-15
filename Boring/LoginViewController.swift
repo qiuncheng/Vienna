@@ -7,54 +7,83 @@
 //
 
 import UIKit
+import PKHUD
 
 class LoginViewController: UIViewController {
-    @IBOutlet weak var usernameTextField: UITextField!
 
+    
+    @IBOutlet weak var usernameTextField: UITextField!
+    var loginQueue: DispatchQueue?
     @IBOutlet weak var passwordTextField: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
+        let queue = DispatchQueue(label: "com.vsccw.boring.login")
+        self.loginQueue = queue
         
+        if let username = UserDefaultsHelper.object(forKey: .userNameForLogin) as? String {
+            usernameTextField.text = username
+        }
     }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesBegan(touches, with: event)
+        view.endEditing(true)
+    }
+    
+    class var loginVC: LoginViewController? {
+        return UIStoryboard.init(name: "Login", bundle: nil).instantiateInitialViewController() as? LoginViewController
+    }
+    
+    // MARK: - Actions
     @IBAction func loginButtonClicked(_ sender: Any) {
         guard usernameTextField.text != nil,
-            passwordTextField.text != nil else {
+            passwordTextField.text != nil,
+            usernameTextField.text != "",
+            passwordTextField.text != "" else {
                 return
         }
-        let loginError = EMClient.shared().login(withUsername: usernameTextField.text, password: passwordTextField.text)
-        if let error = loginError,
-            error.code.rawValue == 204 {
-            let registerError = EMClient.shared().register(withUsername: usernameTextField.text, password: passwordTextField.text)
-            if registerError == nil {
-                EMClient.shared().login(withUsername: usernameTextField.text, password: passwordTextField.text)
-                let tabVC = UIStoryboard.init(name: "Main", bundle: nil).instantiateInitialViewController()
-                UIApplication.shared.keyWindow?.rootViewController = tabVC
+        view.endEditing(true)
+        
+        PKHUD.sharedHUD.contentView = PKHUDProgressView()
+        PKHUD.sharedHUD.show(onView: view)
+        loginQueue?.async { [unowned self] in
+            let loginError = EMClient.shared().login(withUsername: self.usernameTextField.text, password: self.passwordTextField.text)
+            if let error = loginError,
+                error.code.rawValue == 204 {
+                let registerError = EMClient.shared().register(withUsername: self.usernameTextField.text, password: self.passwordTextField.text)
+                if registerError == nil {
+                    EMClient.shared().login(withUsername: self.usernameTextField.text, password: self.passwordTextField.text)
+                    EMClient.shared().options.isAutoLogin = true
+                    DispatchQueue.dispatchSafeQueue {
+                        let tabVC = UIStoryboard.init(name: "Main", bundle: nil).instantiateInitialViewController()
+                        UIApplication.shared.keyWindow?.rootViewController = tabVC
+                    }
+                }
+                DispatchQueue.dispatchSafeQueue {
+                    PKHUD.sharedHUD.hide()
+                }
             }
+            else {
+                EMClient.shared().options.isAutoLogin = true
+                DispatchQueue.dispatchSafeQueue {
+                    let tabVC = UIStoryboard.init(name: "Main", bundle: nil).instantiateInitialViewController()
+                    UIApplication.shared.keyWindow?.rootViewController = tabVC
+                    PKHUD.sharedHUD.hide()
+                }
+            }
+            
         }
-        else {
-            let tabVC = UIStoryboard.init(name: "Main", bundle: nil).instantiateInitialViewController()
-            UIApplication.shared.keyWindow?.rootViewController = tabVC
-        }
+        UserDefaultsHelper.set(value: usernameTextField.text, forKey: .userNameForLogin)
+        UserDefaultsHelper.set(value: passwordTextField.text, forKey: .passwordForLogin)
+        UserDefaultsHelper.set(value: true, forKey: .loginSuccessful)
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 
     override var prefersStatusBarHidden: Bool {
         return true
     }
-
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

@@ -22,7 +22,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         options?.enableConsoleLog = false
         
         EMClient.shared().initializeSDK(with: options)
-      
+        
+        window = UIWindow(frame: UIScreen.main.bounds)
+        
+        let logined = UserDefaultsHelper.bool(forKey: .loginSuccessful)
+        if logined {
+            let mainVC = UIStoryboard(name: "Main", bundle: nil).instantiateInitialViewController()
+            window?.rootViewController = mainVC
+        }
+        else {
+            window?.rootViewController = LoginViewController.loginVC
+        }
+        window?.makeKeyAndVisible()
+        
         return true
     }
 
