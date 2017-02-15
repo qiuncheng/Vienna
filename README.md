@@ -1,5 +1,6 @@
 Vienna: A Demo for [环信即时通信](http://www.easemob.com/)
 ===
+Doc Reference: http://docs.easemob.com/im/300iosclientintegration/10prepareforsdkimport
 
 Use
 ===
