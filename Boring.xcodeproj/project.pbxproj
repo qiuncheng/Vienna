@@ -32,7 +32,7 @@
 		F22EC4791E536C2800E661DD /* AvatarImageViewConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22EC4751E536C2800E661DD /* AvatarImageViewConfiguration.swift */; };
 		F22EC47A1E536C2800E661DD /* ColorCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22EC4761E536C2800E661DD /* ColorCache.swift */; };
 		F2D3A0171E54A1B2003DF445 /* UserDefaultable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D3A0161E54A1B2003DF445 /* UserDefaultable.swift */; };
-		F2D3A0191E54ADCC003DF445 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D3A0181E54ADCC003DF445 /* Common.swift */; };
+		F2D3A0191E54ADCC003DF445 /* DispatchQueue+VS.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D3A0181E54ADCC003DF445 /* DispatchQueue+VS.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -78,7 +78,7 @@
 		F22EC4751E536C2800E661DD /* AvatarImageViewConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AvatarImageViewConfiguration.swift; sourceTree = "<group>"; };
 		F22EC4761E536C2800E661DD /* ColorCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorCache.swift; sourceTree = "<group>"; };
 		F2D3A0161E54A1B2003DF445 /* UserDefaultable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultable.swift; sourceTree = "<group>"; };
-		F2D3A0181E54ADCC003DF445 /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
+		F2D3A0181E54ADCC003DF445 /* DispatchQueue+VS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DispatchQueue+VS.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,7 +131,7 @@
 				F22EC46E1E535DBF00E661DD /* Login.storyboard */,
 				F22EC4701E535EAB00E661DD /* LoginViewController.swift */,
 				F2D3A0161E54A1B2003DF445 /* UserDefaultable.swift */,
-				F2D3A0181E54ADCC003DF445 /* Common.swift */,
+				F2D3A0181E54ADCC003DF445 /* DispatchQueue+VS.swift */,
 				F222B06A1E4D781D0091B4BE /* Assets.xcassets */,
 				F222B06C1E4D781D0091B4BE /* LaunchScreen.storyboard */,
 				F222B06F1E4D781D0091B4BE /* Info.plist */,
@@ -211,7 +211,7 @@
 				TargetAttributes = {
 					F222B05F1E4D781D0091B4BE = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = JDTEF93AA4;
+						DevelopmentTeam = 57EP4P69NV;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -253,7 +253,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F2D3A0191E54ADCC003DF445 /* Common.swift in Sources */,
+				F2D3A0191E54ADCC003DF445 /* DispatchQueue+VS.swift in Sources */,
 				F22EC4711E535EAB00E661DD /* LoginViewController.swift in Sources */,
 				F22EC4781E536C2800E661DD /* AvatarImageView.swift in Sources */,
 				F222B0661E4D781D0091B4BE /* ViewController.swift in Sources */,
@@ -381,7 +381,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = JDTEF93AA4;
+				DEVELOPMENT_TEAM = 57EP4P69NV;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -392,7 +392,7 @@
 				INFOPLIST_FILE = Boring/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.vsccw.Boring;
+				PRODUCT_BUNDLE_IDENTIFIER = com.vsccw.app.Boring;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Boring/Boring-Header.h";
 				SWIFT_VERSION = 3.0;
@@ -403,7 +403,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = JDTEF93AA4;
+				DEVELOPMENT_TEAM = 57EP4P69NV;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -414,7 +414,7 @@
 				INFOPLIST_FILE = Boring/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.vsccw.Boring;
+				PRODUCT_BUNDLE_IDENTIFIER = com.vsccw.app.Boring;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Boring/Boring-Header.h";
 				SWIFT_VERSION = 3.0;

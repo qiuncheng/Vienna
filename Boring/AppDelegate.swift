@@ -20,6 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let options = EMOptions(appkey: "1124170210115158#vsccw4boring2app")
         options?.enableConsoleLog = false
+        options?.apnsCertName = "com_vsccw_app_Boring"
         
         EMClient.shared().initializeSDK(with: options)
         
