@@ -28,11 +28,19 @@
 		F222B0961E4D97110091B4BE /* PKHUD.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F222B0931E4D96F10091B4BE /* PKHUD.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F22EC46F1E535DBF00E661DD /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F22EC46E1E535DBF00E661DD /* Login.storyboard */; };
 		F22EC4711E535EAB00E661DD /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22EC4701E535EAB00E661DD /* LoginViewController.swift */; };
-		F22EC4781E536C2800E661DD /* AvatarImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22EC4741E536C2800E661DD /* AvatarImageView.swift */; };
-		F22EC4791E536C2800E661DD /* AvatarImageViewConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22EC4751E536C2800E661DD /* AvatarImageViewConfiguration.swift */; };
-		F22EC47A1E536C2800E661DD /* ColorCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22EC4761E536C2800E661DD /* ColorCache.swift */; };
 		F2D3A0171E54A1B2003DF445 /* UserDefaultable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D3A0161E54A1B2003DF445 /* UserDefaultable.swift */; };
 		F2D3A0191E54ADCC003DF445 /* DispatchQueue+VS.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D3A0181E54ADCC003DF445 /* DispatchQueue+VS.swift */; };
+		F2D3A01C1E55DDDB003DF445 /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2D3A01A1E55DDD2003DF445 /* SnapKit.framework */; };
+		F2D3A01F1E55E063003DF445 /* ImageHelper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2D3A01E1E55E063003DF445 /* ImageHelper.framework */; };
+		F2D3A0201E55E069003DF445 /* ImageHelper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2D3A01E1E55E063003DF445 /* ImageHelper.framework */; };
+		F2D3A0211E55E069003DF445 /* ImageHelper.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F2D3A01E1E55E063003DF445 /* ImageHelper.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F2D3A0231E55E128003DF445 /* YYCache.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2D3A0221E55E128003DF445 /* YYCache.framework */; };
+		F2D3A0251E55E173003DF445 /* ChatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D3A0241E55E173003DF445 /* ChatCell.swift */; };
+		F2D3A0271E55E2A2003DF445 /* AvatarImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D3A0261E55E2A2003DF445 /* AvatarImageView.swift */; };
+		F2D3A0281E55E6E3003DF445 /* YYCache.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2D3A0221E55E128003DF445 /* YYCache.framework */; };
+		F2D3A0291E55E6E3003DF445 /* YYCache.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F2D3A0221E55E128003DF445 /* YYCache.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F2D3A02A1E55E6FF003DF445 /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2D3A01A1E55DDD2003DF445 /* SnapKit.framework */; };
+		F2D3A02B1E55E6FF003DF445 /* SnapKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F2D3A01A1E55DDD2003DF445 /* SnapKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -42,8 +50,11 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				F2D3A0211E55E069003DF445 /* ImageHelper.framework in Embed Frameworks */,
 				F222B07B1E4D796E0091B4BE /* Hyphenate.framework in Embed Frameworks */,
+				F2D3A0291E55E6E3003DF445 /* YYCache.framework in Embed Frameworks */,
 				F222B0961E4D97110091B4BE /* PKHUD.framework in Embed Frameworks */,
+				F2D3A02B1E55E6FF003DF445 /* SnapKit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -73,12 +84,14 @@
 		F222B0931E4D96F10091B4BE /* PKHUD.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = PKHUD.framework; sourceTree = "<group>"; };
 		F22EC46E1E535DBF00E661DD /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		F22EC4701E535EAB00E661DD /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		F22EC4731E536C2800E661DD /* AvatarImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AvatarImageView.h; sourceTree = "<group>"; };
-		F22EC4741E536C2800E661DD /* AvatarImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AvatarImageView.swift; sourceTree = "<group>"; };
-		F22EC4751E536C2800E661DD /* AvatarImageViewConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AvatarImageViewConfiguration.swift; sourceTree = "<group>"; };
-		F22EC4761E536C2800E661DD /* ColorCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorCache.swift; sourceTree = "<group>"; };
 		F2D3A0161E54A1B2003DF445 /* UserDefaultable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultable.swift; sourceTree = "<group>"; };
 		F2D3A0181E54ADCC003DF445 /* DispatchQueue+VS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DispatchQueue+VS.swift"; sourceTree = "<group>"; };
+		F2D3A01A1E55DDD2003DF445 /* SnapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SnapKit.framework; sourceTree = "<group>"; };
+		F2D3A01E1E55E063003DF445 /* ImageHelper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ImageHelper.framework; sourceTree = "<group>"; };
+		F2D3A0221E55E128003DF445 /* YYCache.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = YYCache.framework; sourceTree = "<group>"; };
+		F2D3A0241E55E173003DF445 /* ChatCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatCell.swift; sourceTree = "<group>"; };
+		F2D3A0261E55E2A2003DF445 /* AvatarImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AvatarImageView.swift; sourceTree = "<group>"; };
+		F2D3A02C1E55E730003DF445 /* Boring.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Boring.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,9 +101,14 @@
 			files = (
 				F222B0901E4D7A120091B4BE /* libsqlite3.tbd in Frameworks */,
 				F222B08E1E4D7A080091B4BE /* libstdc++.6.0.9.tbd in Frameworks */,
+				F2D3A0231E55E128003DF445 /* YYCache.framework in Frameworks */,
 				F222B08A1E4D79EE0091B4BE /* libc++.tbd in Frameworks */,
+				F2D3A01C1E55DDDB003DF445 /* SnapKit.framework in Frameworks */,
+				F2D3A0201E55E069003DF445 /* ImageHelper.framework in Frameworks */,
 				F222B0951E4D97110091B4BE /* PKHUD.framework in Frameworks */,
 				F222B0881E4D79E80091B4BE /* libz.tbd in Frameworks */,
+				F2D3A0281E55E6E3003DF445 /* YYCache.framework in Frameworks */,
+				F2D3A02A1E55E6FF003DF445 /* SnapKit.framework in Frameworks */,
 				F222B0861E4D79E00091B4BE /* ImageIO.framework in Frameworks */,
 				F222B0841E4D79D90091B4BE /* MobileCoreServices.framework in Frameworks */,
 				F222B0821E4D79D00091B4BE /* AVFoundation.framework in Frameworks */,
@@ -98,6 +116,7 @@
 				F222B07E1E4D79C30091B4BE /* CoreMedia.framework in Frameworks */,
 				F222B0941E4D96F10091B4BE /* PKHUD.framework in Frameworks */,
 				F222B0791E4D794C0091B4BE /* Hyphenate.framework in Frameworks */,
+				F2D3A01F1E55E063003DF445 /* ImageHelper.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -124,9 +143,11 @@
 		F222B0621E4D781D0091B4BE /* Boring */ = {
 			isa = PBXGroup;
 			children = (
-				F22EC4721E536C2800E661DD /* AvatarImageView */,
+				F2D3A02C1E55E730003DF445 /* Boring.entitlements */,
 				F222B0631E4D781D0091B4BE /* AppDelegate.swift */,
 				F222B0651E4D781D0091B4BE /* ViewController.swift */,
+				F2D3A0241E55E173003DF445 /* ChatCell.swift */,
+				F2D3A0261E55E2A2003DF445 /* AvatarImageView.swift */,
 				F222B0671E4D781D0091B4BE /* Main.storyboard */,
 				F22EC46E1E535DBF00E661DD /* Login.storyboard */,
 				F22EC4701E535EAB00E661DD /* LoginViewController.swift */,
@@ -162,20 +183,12 @@
 		F222B0921E4D96E50091B4BE /* Carthage */ = {
 			isa = PBXGroup;
 			children = (
+				F2D3A0221E55E128003DF445 /* YYCache.framework */,
+				F2D3A01E1E55E063003DF445 /* ImageHelper.framework */,
+				F2D3A01A1E55DDD2003DF445 /* SnapKit.framework */,
 				F222B0931E4D96F10091B4BE /* PKHUD.framework */,
 			);
 			path = Carthage;
-			sourceTree = "<group>";
-		};
-		F22EC4721E536C2800E661DD /* AvatarImageView */ = {
-			isa = PBXGroup;
-			children = (
-				F22EC4731E536C2800E661DD /* AvatarImageView.h */,
-				F22EC4741E536C2800E661DD /* AvatarImageView.swift */,
-				F22EC4751E536C2800E661DD /* AvatarImageViewConfiguration.swift */,
-				F22EC4761E536C2800E661DD /* ColorCache.swift */,
-			);
-			path = AvatarImageView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -213,6 +226,11 @@
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = 57EP4P69NV;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -255,12 +273,11 @@
 			files = (
 				F2D3A0191E54ADCC003DF445 /* DispatchQueue+VS.swift in Sources */,
 				F22EC4711E535EAB00E661DD /* LoginViewController.swift in Sources */,
-				F22EC4781E536C2800E661DD /* AvatarImageView.swift in Sources */,
+				F2D3A0251E55E173003DF445 /* ChatCell.swift in Sources */,
 				F222B0661E4D781D0091B4BE /* ViewController.swift in Sources */,
 				F222B0641E4D781D0091B4BE /* AppDelegate.swift in Sources */,
-				F22EC47A1E536C2800E661DD /* ColorCache.swift in Sources */,
-				F22EC4791E536C2800E661DD /* AvatarImageViewConfiguration.swift in Sources */,
 				F2D3A0171E54A1B2003DF445 /* UserDefaultable.swift in Sources */,
+				F2D3A0271E55E2A2003DF445 /* AvatarImageView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -381,6 +398,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Boring/Boring.entitlements;
 				DEVELOPMENT_TEAM = 57EP4P69NV;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -403,6 +421,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Boring/Boring.entitlements;
 				DEVELOPMENT_TEAM = 57EP4P69NV;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (

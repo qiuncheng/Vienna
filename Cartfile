@@ -1,1 +1,4 @@
 github "pkluz/PKHUD"
+github "SnapKit/SnapKit"
+github "qiuncheng/ImageHelper"
+github "ibireme/YYCache"

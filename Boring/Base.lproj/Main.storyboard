@@ -19,7 +19,19 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="PYM-cu-Jit">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="PYM-cu-Jit" secondAttribute="bottom" id="0Qd-x5-jL7"/>
+                            <constraint firstItem="PYM-cu-Jit" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="7Lr-Yb-y8T"/>
+                            <constraint firstItem="PYM-cu-Jit" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="BaA-JP-vhn"/>
+                            <constraint firstAttribute="trailing" secondItem="PYM-cu-Jit" secondAttribute="trailing" id="oyS-Fj-Geu"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="聊天室" id="r7b-UV-dUI">
                         <barButtonItem key="rightBarButtonItem" title="登出" id="pcH-kw-pfe">
@@ -28,6 +40,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="PYM-cu-Jit" id="i9x-Yv-BQO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="o20-VM-fgH">
@@ -35,7 +50,7 @@
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
             </objects>
-            <point key="canvasLocation" x="1809" y="693"/>
+            <point key="canvasLocation" x="1808.8" y="692.20389805097454"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="tSi-es-KOW">

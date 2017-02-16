@@ -1,1 +1,4 @@
+github "qiuncheng/ImageHelper" "3.2.2"
 github "pkluz/PKHUD" "4.2.0"
+github "SnapKit/SnapKit" "3.2.0"
+github "ibireme/YYCache" "1.0.4"
