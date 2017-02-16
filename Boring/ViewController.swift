@@ -12,6 +12,13 @@ import UIKit
 class ViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
+
+    var contacts: [Contact]? {
+        didSet {
+            tableView.reloadData()
+        }
+    }
+
     // MARK: - Actions
     @IBAction func logoutButtonClicked(_ sender: Any) {
         UserDefaultsHelper.set(value: false, forKey: .loginSuccessful)
@@ -44,7 +51,12 @@ class ViewController: UIViewController {
         
         EMClient.shared().contactManager.addContact("eee", message: "我想加你好友！")
         EMClient.shared().contactManager.acceptInvitation(forUsername: "eeee")
-        let contacts = EMClient.shared().contactManager.getContacts()
+    }
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        Contact.getContacts { [weak self] results in
+            self?.contacts = results
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -58,19 +70,31 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         return 1
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        if let results = contacts {
+            return results.count
+        }
+        else {
+            return 0
+        }
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return ChatCell.cellHeight
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: ChatCell.identifier, for: indexPath) as? ChatCell {
+            if let results = contacts {
+                cell.avatarImageView?.image = results[indexPath.row].avatarImage
+                cell.nameLabel?.text = results[indexPath.row].username
+            }
             return cell
         }
         else {
             let cell = ChatCell.init(style: .default, reuseIdentifier: ChatCell.identifier)
             return cell
         }
+    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+
     }
 }
 

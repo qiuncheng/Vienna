@@ -12,6 +12,7 @@ import SnapKit
 class ChatCell: UITableViewCell {
     
     var avatarImageView: AvatarImageView?
+    var nameLabel: UILabel?
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -41,7 +42,15 @@ class ChatCell: UITableViewCell {
         _avatarImageView.layer.cornerRadius = 40
         _avatarImageView.layer.masksToBounds = true
         addSubview(_avatarImageView)
-        self.avatarImageView = _avatarImageView
+        avatarImageView = _avatarImageView
+
+        let _nameLabel = UILabel()
+        _nameLabel.font = UIFont.systemFont(ofSize: 20)
+        _nameLabel.textAlignment = .left
+        _nameLabel.textColor = UIColor.darkGray
+        _nameLabel.sizeToFit()
+        addSubview(_nameLabel)
+        nameLabel = _nameLabel
         
         applyConstraints()
     }
@@ -52,6 +61,11 @@ class ChatCell: UITableViewCell {
             $0.top.equalTo(snp.top).offset(10)
             $0.width.equalTo(80)
             $0.height.equalTo(80)
+        })
+
+        nameLabel?.snp.makeConstraints({
+            $0.left.equalTo(avatarImageView!.snp.right).offset(20)
+            $0.top.equalTo(avatarImageView!.snp.top).offset(10)
         })
     }
 

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8621671E1E55EBFD00673E84 /* AllContacts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8621671D1E55EBFD00673E84 /* AllContacts.swift */; };
 		F222B0641E4D781D0091B4BE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F222B0631E4D781D0091B4BE /* AppDelegate.swift */; };
 		F222B0661E4D781D0091B4BE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F222B0651E4D781D0091B4BE /* ViewController.swift */; };
 		F222B0691E4D781D0091B4BE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F222B0671E4D781D0091B4BE /* Main.storyboard */; };
@@ -62,6 +63,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		8621671D1E55EBFD00673E84 /* AllContacts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllContacts.swift; sourceTree = "<group>"; };
 		F222B0601E4D781D0091B4BE /* Boring.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Boring.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F222B0631E4D781D0091B4BE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F222B0651E4D781D0091B4BE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -147,6 +149,7 @@
 				F222B0631E4D781D0091B4BE /* AppDelegate.swift */,
 				F222B0651E4D781D0091B4BE /* ViewController.swift */,
 				F2D3A0241E55E173003DF445 /* ChatCell.swift */,
+				8621671D1E55EBFD00673E84 /* AllContacts.swift */,
 				F2D3A0261E55E2A2003DF445 /* AvatarImageView.swift */,
 				F222B0671E4D781D0091B4BE /* Main.storyboard */,
 				F22EC46E1E535DBF00E661DD /* Login.storyboard */,
@@ -275,6 +278,7 @@
 				F22EC4711E535EAB00E661DD /* LoginViewController.swift in Sources */,
 				F2D3A0251E55E173003DF445 /* ChatCell.swift in Sources */,
 				F222B0661E4D781D0091B4BE /* ViewController.swift in Sources */,
+				8621671E1E55EBFD00673E84 /* AllContacts.swift in Sources */,
 				F222B0641E4D781D0091B4BE /* AppDelegate.swift in Sources */,
 				F2D3A0171E54A1B2003DF445 /* UserDefaultable.swift in Sources */,
 				F2D3A0271E55E2A2003DF445 /* AvatarImageView.swift in Sources */,
