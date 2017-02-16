@@ -1,0 +1,10 @@
+framework module ImageHelper {
+  umbrella header "ImageHelper.h"
+
+  export *
+  module * { export * }
+}
+
+module ImageHelper.Swift {
+    header "ImageHelper-Swift.h"
+}
