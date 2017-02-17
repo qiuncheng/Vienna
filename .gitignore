@@ -6,6 +6,8 @@
 build/
 DerivedData/
 
+*.playground
+
 ## Various settings
 *.pbxuser
 !default.pbxuser
