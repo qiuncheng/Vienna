@@ -8,6 +8,7 @@
 
 import UIKit
 import PKHUD
+import UserNotifications
 
 class LoginViewController: UIViewController {
 
@@ -23,6 +24,31 @@ class LoginViewController: UIViewController {
         if let username = UserDefaultsHelper.object(forKey: .userNameForLogin) as? String {
             usernameTextField.text = username
         }
+    }
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+
+        registerNotification()
+    }
+
+    func registerNotification() {
+        let application = UIApplication.shared
+        if #available(iOS 10.0, *) {
+            UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .badge, .sound]) { (granted, error) in
+                if granted {
+                    application.registerForRemoteNotifications()
+                }
+            }
+            return ;
+        } else {
+            // Fallback on earlier versions
+            if application.responds(to: #selector(UIApplication.registerUserNotificationSettings(_:))) {
+                let settings = UIUserNotificationSettings.init(types: [.badge, .sound, .alert], categories: nil)
+                application .registerUserNotificationSettings(settings)
+            }
+        }
+
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {

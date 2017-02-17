@@ -21,6 +21,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let options = EMOptions(appkey: "1124170210115158#vsccw4boring2app")
         options?.enableConsoleLog = false
         options?.apnsCertName = "com_vsccw_app_Boring"
+        options?.isAutoAcceptGroupInvitation = true
+        options?.isAutoAcceptFriendInvitation = true
         
         EMClient.shared().initializeSDK(with: options)
         
@@ -37,6 +39,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.makeKeyAndVisible()
         
         return true
+    }
+
+
+    func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
+        DispatchQueue.global().async {
+            EMClient.shared().bindDeviceToken(deviceToken)
+        }
+    }
+    func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable : Any]) {
+        EMClient.shared().application(application, didReceiveRemoteNotification: userInfo)
+    }
+    func application(_ application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: Error) {
+        print("通知配置失败")
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
