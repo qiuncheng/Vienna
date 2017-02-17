@@ -94,6 +94,7 @@
 		F2D3A0241E55E173003DF445 /* ChatCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatCell.swift; sourceTree = "<group>"; };
 		F2D3A0261E55E2A2003DF445 /* AvatarImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AvatarImageView.swift; sourceTree = "<group>"; };
 		F2D3A02C1E55E730003DF445 /* Boring.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Boring.entitlements; sourceTree = "<group>"; };
+		F2D3A02D1E569277003DF445 /* Boring.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Boring.playground; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +146,7 @@
 		F222B0621E4D781D0091B4BE /* Boring */ = {
 			isa = PBXGroup;
 			children = (
+				F2D3A02D1E569277003DF445 /* Boring.playground */,
 				F2D3A02C1E55E730003DF445 /* Boring.entitlements */,
 				F222B0631E4D781D0091B4BE /* AppDelegate.swift */,
 				F222B0651E4D781D0091B4BE /* ViewController.swift */,

@@ -33,9 +33,40 @@ struct Contact {
 }
 
 struct CacheHelper {
-    var cache: YYCache?
+    var cacheForContact: YYCache? {
+        if let pathStr = NSSearchPathForDirectoriesInDomains(.cachesDirectory, .userDomainMask, true).first {
+            let path = pathStr + "cache_for_contact"
+            let cache = YYCache.init(path: path)
+            cache?.diskCache.costLimit = UInt(20 * 1024 * 1024)
+            cache?.diskCache.ageLimit = TimeInterval(7 * 24 * 60 * 60)
+            cache?.memoryCache.ageLimit = 5 * 60
+            cache?.memoryCache.costLimit = UInt(5 * 1024 * 1024)
+            return cache
+        }
+        return nil
+    }
     var cacheQueue: DispatchQueue?
-
+    
+    init() {
+        cacheQueue = DispatchQueue(label: "com.vsccw.cache.contact", qos: .default)
+    }
+    
+    static var imageCacheKey: String {
+        return "image_cache_for_contact"
+    }
+    
+    func cacheImage(image: UIImage) {
+        cacheQueue?.async {
+            self.cacheForContact?.setObject(image, forKey: CacheHelper.imageCacheKey)
+        }
+    }
+    func imageFromCache(completion: ((UIImage?) -> Void)?) {
+        cacheQueue?.async {
+            let image = self.cacheForContact?.object(forKey: CacheHelper.imageCacheKey) as? UIImage
+            completion?(image)
+        }
+    }
+    
 }
 
 extension UIColor {
