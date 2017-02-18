@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8621671E1E55EBFD00673E84 /* AllContacts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8621671D1E55EBFD00673E84 /* AllContacts.swift */; };
+		86414CA81E58145800F2079E /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86414CA71E58145800F2079E /* Common.swift */; };
 		F222B0641E4D781D0091B4BE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F222B0631E4D781D0091B4BE /* AppDelegate.swift */; };
 		F222B0661E4D781D0091B4BE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F222B0651E4D781D0091B4BE /* ViewController.swift */; };
 		F222B0691E4D781D0091B4BE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F222B0671E4D781D0091B4BE /* Main.storyboard */; };
@@ -64,6 +65,7 @@
 
 /* Begin PBXFileReference section */
 		8621671D1E55EBFD00673E84 /* AllContacts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllContacts.swift; sourceTree = "<group>"; };
+		86414CA71E58145800F2079E /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
 		F222B0601E4D781D0091B4BE /* Boring.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Boring.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F222B0631E4D781D0091B4BE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F222B0651E4D781D0091B4BE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -158,6 +160,7 @@
 				F22EC4701E535EAB00E661DD /* LoginViewController.swift */,
 				F2D3A0161E54A1B2003DF445 /* UserDefaultable.swift */,
 				F2D3A0181E54ADCC003DF445 /* DispatchQueue+VS.swift */,
+				86414CA71E58145800F2079E /* Common.swift */,
 				F222B06A1E4D781D0091B4BE /* Assets.xcassets */,
 				F222B06C1E4D781D0091B4BE /* LaunchScreen.storyboard */,
 				F222B06F1E4D781D0091B4BE /* Info.plist */,
@@ -280,6 +283,7 @@
 				F22EC4711E535EAB00E661DD /* LoginViewController.swift in Sources */,
 				F2D3A0251E55E173003DF445 /* ChatCell.swift in Sources */,
 				F222B0661E4D781D0091B4BE /* ViewController.swift in Sources */,
+				86414CA81E58145800F2079E /* Common.swift in Sources */,
 				8621671E1E55EBFD00673E84 /* AllContacts.swift in Sources */,
 				F222B0641E4D781D0091B4BE /* AppDelegate.swift in Sources */,
 				F2D3A0171E54A1B2003DF445 /* UserDefaultable.swift in Sources */,

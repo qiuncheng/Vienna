@@ -10,13 +10,13 @@ import UIKit
 
 
 extension DispatchQueue {
-    static func dispatchSafeQueue(block: ((Void) -> Void)?) {
+    static func dispatchSafeQueue(_ handler: Completion<Void>) {
         if Thread.isMainThread {
-            block?()
+            handler?()
         }
         else {
             DispatchQueue.main.async {
-                block?()
+                handler?()
             }
         }
     }
