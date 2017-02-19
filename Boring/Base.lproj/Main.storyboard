@@ -20,9 +20,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="PYM-cu-Jit">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="11" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="PYM-cu-Jit">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -42,6 +42,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="PYM-cu-Jit" id="i9x-Yv-BQO"/>
+                        <segue destination="fhM-Zd-DRe" kind="show" identifier="showChatViewController" id="SjM-W7-8JQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -51,6 +52,47 @@
                 </imageView>
             </objects>
             <point key="canvasLocation" x="1808.8" y="692.20389805097454"/>
+        </scene>
+        <!--Title-->
+        <scene sceneID="7Xt-VH-QiJ">
+            <objects>
+                <viewController modalTransitionStyle="flipHorizontal" hidesBottomBarWhenPushed="YES" id="fhM-Zd-DRe" customClass="ChatViewController" customModule="Boring" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="QPz-Al-YIU"/>
+                        <viewControllerLayoutGuide type="bottom" id="lKp-p1-Ow2"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="mFa-P5-911">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="2Fx-cd-TRX">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="2Fx-cd-TRX" firstAttribute="leading" secondItem="mFa-P5-911" secondAttribute="leading" id="Sgn-gI-9BT"/>
+                            <constraint firstAttribute="trailing" secondItem="2Fx-cd-TRX" secondAttribute="trailing" id="dxh-KU-zWd"/>
+                            <constraint firstItem="2Fx-cd-TRX" firstAttribute="top" secondItem="mFa-P5-911" secondAttribute="top" id="o7n-K3-sCh"/>
+                            <constraint firstAttribute="bottom" secondItem="2Fx-cd-TRX" secondAttribute="bottom" id="zTs-eu-ScZ"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Title" id="LIo-Yk-uGi">
+                        <barButtonItem key="rightBarButtonItem" title="聊天" id="7gz-fm-pDs">
+                            <connections>
+                                <action selector="showKeyboardButtonClicked:" destination="fhM-Zd-DRe" id="Q7q-dO-G6g"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="2Fx-cd-TRX" id="8PU-xS-YzL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xgp-0y-xbU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2524" y="692"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="tSi-es-KOW">
@@ -63,6 +105,10 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="rRG-mQ-y0L">
+                        <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="p1H-lJ-WPj"/>
                     </connections>

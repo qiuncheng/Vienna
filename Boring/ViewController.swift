@@ -8,9 +8,14 @@
 
 import UIKit
 import PKHUD
+import SegueHandlerHelper
 
 
-class ViewController: UIViewController, EMContactManagerDelegate {
+class ViewController: UIViewController, EMContactManagerDelegate, SegueHandlerHelper {
+
+    enum SegueIdentifierType: String {
+        case showChatViewController
+    }
     
     @IBOutlet weak var tableView: UITableView!
 
@@ -51,9 +56,7 @@ class ViewController: UIViewController, EMContactManagerDelegate {
         tableView.dataSource = self
         tableView.register(ChatCell.self, forCellReuseIdentifier: ChatCell.identifier)
         
-        if let username = UserDefaultsHelper.object(forKey: .userNameForLogin) as? String {
-            title = username
-        }
+        title = "无聊"
         
         EMClient.shared().contactManager.add(self, delegateQueue: nil)
     }
@@ -113,6 +116,19 @@ class ViewController: UIViewController, EMContactManagerDelegate {
         // Dispose of any resources that can be recreated.
     }
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let identifierType = identifier(for: segue)
+
+        if identifierType == .showChatViewController {
+            let chatVC = segue.destination as! ChatViewController
+            if let indexPathForSelected = tableView.indexPathForSelectedRow {
+                chatVC.chatTarget = contacts?[indexPathForSelected.row]
+            }
+        }
+    }
+
+    // MARK: - EMContactManagerDelegate
+
     func friendshipDidAdd(byUser aUsername: String!) {
         HUD.flash(.label("添加『\(aUsername!)』好友成功"), onView: view, delay: 1.0, completion: nil)
         getContacts()
@@ -164,8 +180,13 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
             return cell
         }
     }
+
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return CGFloat.leastNormalMagnitude
+    }
+
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        performSegue(with: .showChatViewController, sender: self)
     }
 
     func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {

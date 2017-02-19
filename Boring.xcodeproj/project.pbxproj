@@ -9,6 +9,13 @@
 /* Begin PBXBuildFile section */
 		8621671E1E55EBFD00673E84 /* AllContacts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8621671D1E55EBFD00673E84 /* AllContacts.swift */; };
 		86414CA81E58145800F2079E /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86414CA71E58145800F2079E /* Common.swift */; };
+		86806E731E594A3E003E2A2F /* SegueHandlerHelper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86806E721E594A3E003E2A2F /* SegueHandlerHelper.framework */; };
+		86806E741E594A51003E2A2F /* SegueHandlerHelper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86806E721E594A3E003E2A2F /* SegueHandlerHelper.framework */; };
+		86806E751E594A51003E2A2F /* SegueHandlerHelper.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 86806E721E594A3E003E2A2F /* SegueHandlerHelper.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		86806E771E594AAB003E2A2F /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86806E761E594AAB003E2A2F /* ChatViewController.swift */; };
+		86806E7B1E596337003E2A2F /* ReceiverCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86806E7A1E596337003E2A2F /* ReceiverCell.swift */; };
+		86806E7D1E596342003E2A2F /* SenderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86806E7C1E596342003E2A2F /* SenderCell.swift */; };
+		86806E7F1E596365003E2A2F /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86806E7E1E596365003E2A2F /* Message.swift */; };
 		F222B0641E4D781D0091B4BE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F222B0631E4D781D0091B4BE /* AppDelegate.swift */; };
 		F222B0661E4D781D0091B4BE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F222B0651E4D781D0091B4BE /* ViewController.swift */; };
 		F222B0691E4D781D0091B4BE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F222B0671E4D781D0091B4BE /* Main.storyboard */; };
@@ -57,6 +64,7 @@
 				F2D3A0291E55E6E3003DF445 /* YYCache.framework in Embed Frameworks */,
 				F222B0961E4D97110091B4BE /* PKHUD.framework in Embed Frameworks */,
 				F2D3A02B1E55E6FF003DF445 /* SnapKit.framework in Embed Frameworks */,
+				86806E751E594A51003E2A2F /* SegueHandlerHelper.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -66,6 +74,11 @@
 /* Begin PBXFileReference section */
 		8621671D1E55EBFD00673E84 /* AllContacts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllContacts.swift; sourceTree = "<group>"; };
 		86414CA71E58145800F2079E /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
+		86806E721E594A3E003E2A2F /* SegueHandlerHelper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SegueHandlerHelper.framework; sourceTree = "<group>"; };
+		86806E761E594AAB003E2A2F /* ChatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		86806E7A1E596337003E2A2F /* ReceiverCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReceiverCell.swift; sourceTree = "<group>"; };
+		86806E7C1E596342003E2A2F /* SenderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SenderCell.swift; sourceTree = "<group>"; };
+		86806E7E1E596365003E2A2F /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		F222B0601E4D781D0091B4BE /* Boring.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Boring.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F222B0631E4D781D0091B4BE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F222B0651E4D781D0091B4BE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -105,11 +118,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				F222B0901E4D7A120091B4BE /* libsqlite3.tbd in Frameworks */,
+				86806E731E594A3E003E2A2F /* SegueHandlerHelper.framework in Frameworks */,
 				F222B08E1E4D7A080091B4BE /* libstdc++.6.0.9.tbd in Frameworks */,
 				F2D3A0231E55E128003DF445 /* YYCache.framework in Frameworks */,
 				F222B08A1E4D79EE0091B4BE /* libc++.tbd in Frameworks */,
 				F2D3A01C1E55DDDB003DF445 /* SnapKit.framework in Frameworks */,
 				F2D3A0201E55E069003DF445 /* ImageHelper.framework in Frameworks */,
+				86806E741E594A51003E2A2F /* SegueHandlerHelper.framework in Frameworks */,
 				F222B0951E4D97110091B4BE /* PKHUD.framework in Frameworks */,
 				F222B0881E4D79E80091B4BE /* libz.tbd in Frameworks */,
 				F2D3A0281E55E6E3003DF445 /* YYCache.framework in Frameworks */,
@@ -153,9 +168,13 @@
 				F222B0631E4D781D0091B4BE /* AppDelegate.swift */,
 				F222B0651E4D781D0091B4BE /* ViewController.swift */,
 				F2D3A0241E55E173003DF445 /* ChatCell.swift */,
+				86806E7A1E596337003E2A2F /* ReceiverCell.swift */,
+				86806E7C1E596342003E2A2F /* SenderCell.swift */,
+				86806E7E1E596365003E2A2F /* Message.swift */,
 				8621671D1E55EBFD00673E84 /* AllContacts.swift */,
 				F2D3A0261E55E2A2003DF445 /* AvatarImageView.swift */,
 				F222B0671E4D781D0091B4BE /* Main.storyboard */,
+				86806E761E594AAB003E2A2F /* ChatViewController.swift */,
 				F22EC46E1E535DBF00E661DD /* Login.storyboard */,
 				F22EC4701E535EAB00E661DD /* LoginViewController.swift */,
 				F2D3A0161E54A1B2003DF445 /* UserDefaultable.swift */,
@@ -191,6 +210,7 @@
 		F222B0921E4D96E50091B4BE /* Carthage */ = {
 			isa = PBXGroup;
 			children = (
+				86806E721E594A3E003E2A2F /* SegueHandlerHelper.framework */,
 				F2D3A0221E55E128003DF445 /* YYCache.framework */,
 				F2D3A01E1E55E063003DF445 /* ImageHelper.framework */,
 				F2D3A01A1E55DDD2003DF445 /* SnapKit.framework */,
@@ -279,6 +299,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				86806E7B1E596337003E2A2F /* ReceiverCell.swift in Sources */,
 				F2D3A0191E54ADCC003DF445 /* DispatchQueue+VS.swift in Sources */,
 				F22EC4711E535EAB00E661DD /* LoginViewController.swift in Sources */,
 				F2D3A0251E55E173003DF445 /* ChatCell.swift in Sources */,
@@ -286,7 +307,10 @@
 				86414CA81E58145800F2079E /* Common.swift in Sources */,
 				8621671E1E55EBFD00673E84 /* AllContacts.swift in Sources */,
 				F222B0641E4D781D0091B4BE /* AppDelegate.swift in Sources */,
+				86806E7D1E596342003E2A2F /* SenderCell.swift in Sources */,
+				86806E7F1E596365003E2A2F /* Message.swift in Sources */,
 				F2D3A0171E54A1B2003DF445 /* UserDefaultable.swift in Sources */,
+				86806E771E594AAB003E2A2F /* ChatViewController.swift in Sources */,
 				F2D3A0271E55E2A2003DF445 /* AvatarImageView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
