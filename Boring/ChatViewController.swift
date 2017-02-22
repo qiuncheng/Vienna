@@ -13,7 +13,13 @@ class ChatViewController: UIViewController, EMChatManagerDelegate, UITextFieldDe
 
     @IBOutlet weak var tableView: UITableView!
     var chatTarget: Contact?
-    var messages: [Message]?
+    var messages: [Message]? = [Message]() {
+        didSet {
+            DispatchQueue.dispatchSafeQueue { [weak self] in
+                self?.tableView.reloadData()
+            }
+        }
+    }
 
     var inputTextField: UITextField?
     var senderButton: UIButton?
@@ -59,10 +65,20 @@ class ChatViewController: UIViewController, EMChatManagerDelegate, UITextFieldDe
         EMClient.shared().chatManager.add(self, delegateQueue: nil)
         let conversation = EMClient.shared().chatManager.getConversation(chatTarget!.username, type: EMConversationTypeChat, createIfNotExist: true)
         self.conversation = conversation
+        conversation?.loadMessagesStart(fromId: nil, count: 10, searchDirection: EMMessageSearchDirectionUp, completion: { [weak self] (ms, error) in
+            if error == nil {
+                if let mmm = ms as? [EMMessage] {
+                    for m in mmm {
+                        let message = Message.init(m)
+                        self?.messages?.append(message)
+                    }
+                }
+            }
+        })
 
         view.addSubview(inputBar)
         inputBar.snp.makeConstraints({
-            $0.height.equalTo(49)
+            $0.height.equalTo(30)
             $0.left.equalTo(view.snp.left)
             $0.right.equalTo(view.snp.right)
             $0.bottom.equalTo(view.snp.bottom)
@@ -122,9 +138,12 @@ class ChatViewController: UIViewController, EMChatManagerDelegate, UITextFieldDe
             inputTextField?.text != "" {
             let body = EMTextMessageBody.init(text: inputTextField?.text)
             let message = EMMessage(conversationID: conversation?.conversationId, from: currentUsername, to: chatTarget?.username, body: body, ext: nil)
-            EMClient.shared().chatManager.send(message, progress: nil, completion: { (message, error) in
+            EMClient.shared().chatManager.send(message, progress: nil, completion: { [weak self] (message, error) in
                 if error == nil {
                     print("成功发送消息 ： \(message)")
+                    self?.inputTextField?.text = ""
+                    let message = Message.init(message!)
+                    self?.messages?.append(message)
                 }
             })
         }
@@ -139,6 +158,12 @@ class ChatViewController: UIViewController, EMChatManagerDelegate, UITextFieldDe
     // MARK: - EMChatManagerDelegate
     func messagesDidReceive(_ aMessages: [Any]!) {
         print("成功接收到消息 \(aMessages)")
+        if let messages = aMessages as? [EMMessage] {
+            for m in messages {
+                let mmm = Message.init(m)
+                self.messages?.append(mmm)
+            }
+        }
     }
     
     func messagesDidDeliver(_ aMessages: [Any]!) {
@@ -152,10 +177,23 @@ extension ChatViewController: UITableViewDelegate, UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if let messages = self.messages {
+            return messages.count
+        }
         return 0
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        let cell = tableView.dequeueReusableCell(withIdentifier: "chatCell")
+        if let messages = self.messages {
+            let mmm = messages[indexPath.row]
+            if mmm.owner == .receiver {
+                cell?.textLabel?.text = "『收到』\(mmm.content!)"
+            }
+            else {
+                cell?.textLabel?.text = "『发出』\(mmm.content!)"
+            }
+        }
+        return cell!
     }
 }

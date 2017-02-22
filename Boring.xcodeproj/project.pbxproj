@@ -252,7 +252,7 @@
 				TargetAttributes = {
 					F222B05F1E4D781D0091B4BE = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = 57EP4P69NV;
+						DevelopmentTeam = AXEMXHF2MM;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.Push = {
@@ -433,7 +433,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Boring/Boring.entitlements;
-				DEVELOPMENT_TEAM = 57EP4P69NV;
+				DEVELOPMENT_TEAM = AXEMXHF2MM;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -444,7 +444,7 @@
 				INFOPLIST_FILE = Boring/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.vsccw.app.Boring;
+				PRODUCT_BUNDLE_IDENTIFIER = com.vsccw.app.Boring.dev;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Boring/Boring-Header.h";
 				SWIFT_VERSION = 3.0;
@@ -456,7 +456,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Boring/Boring.entitlements;
-				DEVELOPMENT_TEAM = 57EP4P69NV;
+				DEVELOPMENT_TEAM = AXEMXHF2MM;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -467,7 +467,7 @@
 				INFOPLIST_FILE = Boring/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.vsccw.app.Boring;
+				PRODUCT_BUNDLE_IDENTIFIER = com.vsccw.app.Boring.dev;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Boring/Boring-Header.h";
 				SWIFT_VERSION = 3.0;
