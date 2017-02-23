@@ -37,6 +37,7 @@
 		F222B0961E4D97110091B4BE /* PKHUD.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F222B0931E4D96F10091B4BE /* PKHUD.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F22EC46F1E535DBF00E661DD /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F22EC46E1E535DBF00E661DD /* Login.storyboard */; };
 		F22EC4711E535EAB00E661DD /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22EC4701E535EAB00E661DD /* LoginViewController.swift */; };
+		F2C1466B1E5F4365009963CD /* ChatTextCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C1466A1E5F4365009963CD /* ChatTextCell.swift */; };
 		F2D3A0171E54A1B2003DF445 /* UserDefaultable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D3A0161E54A1B2003DF445 /* UserDefaultable.swift */; };
 		F2D3A0191E54ADCC003DF445 /* DispatchQueue+VS.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D3A0181E54ADCC003DF445 /* DispatchQueue+VS.swift */; };
 		F2D3A01C1E55DDDB003DF445 /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2D3A01A1E55DDD2003DF445 /* SnapKit.framework */; };
@@ -101,6 +102,7 @@
 		F222B0931E4D96F10091B4BE /* PKHUD.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = PKHUD.framework; sourceTree = "<group>"; };
 		F22EC46E1E535DBF00E661DD /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		F22EC4701E535EAB00E661DD /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		F2C1466A1E5F4365009963CD /* ChatTextCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatTextCell.swift; sourceTree = "<group>"; };
 		F2D3A0161E54A1B2003DF445 /* UserDefaultable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultable.swift; sourceTree = "<group>"; };
 		F2D3A0181E54ADCC003DF445 /* DispatchQueue+VS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DispatchQueue+VS.swift"; sourceTree = "<group>"; };
 		F2D3A01A1E55DDD2003DF445 /* SnapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SnapKit.framework; sourceTree = "<group>"; };
@@ -175,6 +177,7 @@
 				F2D3A0261E55E2A2003DF445 /* AvatarImageView.swift */,
 				F222B0671E4D781D0091B4BE /* Main.storyboard */,
 				86806E761E594AAB003E2A2F /* ChatViewController.swift */,
+				F2C1466A1E5F4365009963CD /* ChatTextCell.swift */,
 				F22EC46E1E535DBF00E661DD /* Login.storyboard */,
 				F22EC4701E535EAB00E661DD /* LoginViewController.swift */,
 				F2D3A0161E54A1B2003DF445 /* UserDefaultable.swift */,
@@ -303,6 +306,7 @@
 				F2D3A0191E54ADCC003DF445 /* DispatchQueue+VS.swift in Sources */,
 				F22EC4711E535EAB00E661DD /* LoginViewController.swift in Sources */,
 				F2D3A0251E55E173003DF445 /* ChatCell.swift in Sources */,
+				F2C1466B1E5F4365009963CD /* ChatTextCell.swift in Sources */,
 				F222B0661E4D781D0091B4BE /* ViewController.swift in Sources */,
 				86414CA81E58145800F2079E /* Common.swift in Sources */,
 				8621671E1E55EBFD00673E84 /* AllContacts.swift in Sources */,
